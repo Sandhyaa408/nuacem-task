@@ -1,0 +1,63 @@
+<div class="weather-app">
+    <h5>Weather App</h5>
+<div class="d-flex">
+    <div class="left-panel">
+      <div class="left-search">
+        <input type="text" [(ngModel)]="cityName" placeholder="Enter city name">
+        <button (click)="addLocation()" *ngIf="!showSpinner">+</button>
+        <div class="spinner-border text-primary input-spinner" role="status" *ngIf="showSpinner">
+            <span class="sr-only"></span>
+          </div>
+      </div>
+      <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+      <h6 class="my-2">Recent Location</h6>
+      <ul>
+        <li *ngFor="let location of locations" (click)="getForecast(location.name)">
+
+          <span>{{ location.name }} - {{ location.temperature }}°C</span>
+          <div class="list-icons">
+            <div class="spinner-border text-primary input-spinner" role="status" *ngIf="location.showSpinner">
+                <span class="sr-only"></span>
+              </div>
+            <img src="./assets/images/refresh.svg" (click)="updateLocation($event,location)"  *ngIf="!location.showSpinner" class="search-icon" />
+            <img src="./assets/images/delete.svg" (click)="removeLocation(location)"  class="search-icon" />
+        </div>
+        </li>
+      </ul>
+      <button class="btn-clear" (click)="clearLocations()">Clear All</button>
+    </div>
+   
+    <div class="right-pannel" *ngIf="forecastData">
+        <div class="title">
+            <h6>{{currentCityName}}</h6>
+            <img src="./assets/images/refresh.svg"  (click)="getForecast(currentCityName)">
+        </div>
+        <h2></h2>
+        <div class="sec-weather">
+            <div class="icon">
+                <img src="./assets/images/weather-icon.gif">
+            </div>
+            <div class="icon-details">
+                
+                <p>{{forecastData[0].main.temp}}°C</p>
+                <p>{{forecastData[0].weather[0].description}}</p>
+                <p>Wind: {{forecastData[0].wind.speed}}ms {{forecastData[0].wind.speed}}deg</p>
+                <p>Pressure: {{forecastData[0].main.pressure}}</p>
+                
+            </div>
+        </div>
+        <div class="details">
+            <ul>
+                <li *ngFor="let forecast of forecastData">
+                    <span> {{ forecast.dt_txt | dateTime }} </span>
+                    <!-- <span> {{ getDate(forecast.dt) }} </span> -->
+                    <span> {{ getDay(forecast.dt) }} </span>
+                    
+                    <img src="./assets/images/weather-icon.gif">
+                    <span>{{forecast.main.temp}}°C</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+  </div>
+  

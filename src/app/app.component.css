@@ -1,0 +1,18 @@
+header{
+    position: fixed;
+    top: 0;
+    background: #fff;
+    right: 0;
+    left: 0;
+    z-index: 9;
+}
+ul li span{
+    background: #878585;
+    width: 32px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 100px;
+    margin-left: 10px;
+    height: 32px;
+    line-height: 32px;
+}

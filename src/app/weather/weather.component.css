@@ -1,0 +1,123 @@
+.weather-app{
+padding: 0px 15px 15px 15px;
+margin-top: 100px;
+}
+
+.weather-app .left-panel{
+    margin-right: 20px;
+    border: 1px solid #ccc;
+    width: 25%;
+    position: relative;
+    padding: 15px 15px 40px 15px;
+}
+.weather-app .left-panel .left-search{
+    padding-bottom: 15px;
+    border-bottom: 1.5px solid #000;
+}
+.weather-app .left-panel .left-search input{
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 85%;
+    padding: 10px;
+
+}
+.weather-app .left-panel .left-search .input-spinner{
+   
+    width: 20px;
+    height: 20px;
+
+}
+.weather-app .left-panel .btn-clear{
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+
+}
+.weather-app .left-panel .left-search input:active{
+    box-shadow: none;
+    outline: 0;
+
+}
+.weather-app .left-panel .left-search input:focus{
+    box-shadow: none;
+    outline: 0;
+
+}
+
+.weather-app .left-panel .left-search button{
+    border: none;
+    background: none;
+    font-size: 23px;
+    margin-left: 5px;
+}
+.weather-app .left-panel ul{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.weather-app .left-panel ul li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ccc;
+    padding: 0 0 10px 0;
+    margin-bottom: 10px;
+}
+.weather-app .left-panel ul li .list-icons img{
+    width: 20px;
+    margin-left: 10px;
+}
+.weather-app .left-panel ul li .list-icons .input-spinner{
+    width: 20px;
+    height: 20px;
+}
+.weather-app .left-panel ul li .list-icons img:first-child{
+    margin-left: 0;
+}
+.right-pannel{
+    width: 65%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    float: left;
+}
+.right-pannel .title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.right-pannel .title img{
+    width: 25px;
+}
+.right-pannel .sec-weather{
+    display: flex;
+}
+.right-pannel .sec-weather .icon{
+    margin-right: 20px;
+}
+.right-pannel .sec-weather .icon-details p{
+    font-size: 20px;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+.right-pannel .details{
+    margin: 25px 0px;
+}
+.right-pannel .details ul{
+    margin: 0;
+    padding: 0;
+}
+.right-pannel .details ul li{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-align: center;
+    float: left;
+    margin-right: 30px;
+}
+.right-pannel .details ul li span{
+    display: block;
+}
+.right-pannel .details ul li img{
+    width: 60px;
+    margin: 10px 0px;
+}

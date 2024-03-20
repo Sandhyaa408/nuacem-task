@@ -1,0 +1,15 @@
+
+    <div class="main">
+        <h5>Counter App</h5>
+        <div class="row">
+            <button type="button" class="btn-main" (click)="resetCounters()">Reset</button>
+            <button type="button" class="btn-main" (click)="addCounter()">Add</button>
+        </div>
+
+        <div  *ngFor="let counter of counters; let i = index" class="row">
+            <label class="count">{{counter.count}}</label>
+            <button type="button" class="btn-incr" (click)="incrementCounter(counter)">Increment</button>
+            <button type="button" class="btn-incr" (click)="decrementCounter(counter)">Decrement</button>
+            <button type="button" class="btn-dele" (click)="deleteCounter(i)">Delete</button>
+        </div>
+      </div>
